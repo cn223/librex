@@ -64,6 +64,14 @@ a:hover,
     font-family: sans-serif;
     border: 1px solid var(--search-container-background-border);
     border-radius: 25px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+.search-container input:hover,
+.sub-search-container input:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
 }
 
 .search-button-wrapper button,
@@ -73,13 +81,14 @@ a:hover,
     background-color: var(--button-bg);
     font-size: 14px;
     border: 1px solid var(--main-bg);
-    border-radius: 4px;
+    border-radius: 7px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     padding: 13px 10px 13px 10px;
 }
 
 .search-button-wrapper button {
 
-    margin: 30px 60px 0px 60px;
+    margin: 30px;
 }
 
 .sub-search-container {
@@ -205,6 +214,13 @@ a:hover,
     margin-left: 840px;
     margin-top: 0px;
     position: absolute;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+.special-result-container:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
 }
 
 .text-result-wrapper {
@@ -327,6 +343,11 @@ a[title] {
 
 .X {
     color: #bd93f9;
+    transition: 0.8s;
+}
+
+.X:hover {
+    transform:rotateY(1080deg)
 }
 
 .seeders {
@@ -335,6 +356,14 @@ a[title] {
 
 .leechers {
     color: #ff79c6;
+}
+
+@media(prefers-reduced-motion) {
+    .search-container input:hover,
+    .sub-search-container input:hover {
+        animation:none;
+        transform:none;
+    }
 }
 
 @media only screen and (max-width: 1320px) {
